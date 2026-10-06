@@ -11,7 +11,7 @@
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
 ![Platforms](https://img.shields.io/badge/Android%20%C2%B7%20iOS%20%C2%B7%20Web-5B3420?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-passing-2E7D32?style=flat-square)
+[![CI / CD](https://github.com/MuniraAlzughaibi/saudi-heritage/actions/workflows/ci.yml/badge.svg)](https://github.com/MuniraAlzughaibi/saudi-heritage/actions/workflows/ci.yml)
 
 </div>
 
@@ -86,6 +86,7 @@ lib/
 - **State management:** `ChangeNotifier` services exposed through an `InheritedNotifier` (`AppScope`), and a broadcast `Stream` for outbid alerts. No external state packages needed.
 - **Arabic-first UI:** full RTL layout, Arabic localization for date pickers, and the bundled Tajawal font.
 - **Tests:** unit tests for bidding rules, outbid alerts, the rival-bidder simulation (with `fake_async`), bookings and authentication, plus a widget test (`flutter test`).
+- **CI/CD with GitHub Actions:** every push and pull request runs formatting checks, `flutter analyze` and the test suite; pushes to `main` then build the web app and deploy it to GitHub Pages automatically ([workflow](.github/workflows/ci.yml)).
 - **Reproducible screenshots:** `flutter test tool/screenshots_test.dart` drives the real app and regenerates every image above.
 
 ## Team

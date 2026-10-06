@@ -140,7 +140,12 @@ void main() {
     await tester.pumpAndSettle();
     await _clearSnackbar(tester);
     final dallah = repo.auctions.firstWhere((a) => a.id == 'a2');
-    repo.placeBid('a2', bidderId: 'rival-reem', bidderName: 'ريم', amount: dallah.minimumNextBid);
+    repo.placeBid(
+      'a2',
+      bidderId: 'rival-reem',
+      bidderName: 'ريم',
+      amount: dallah.minimumNextBid,
+    );
     await tester.pumpAndSettle();
     await _shot(tester, '08_outbid');
     await _clearSnackbar(tester);
